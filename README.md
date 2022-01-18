@@ -94,12 +94,38 @@ We import the CSS file in the ```<head>``` section of the document and the javas
 ```
 
 
+Next, we will implement a container and row to contain our content:
 
+```html
 
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl">
+                    <h1 class="display-1">Liam Osler</h1>
+                    <p class="display-3">CSCI3172 Lab 1: a bit about me</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm">
+                    <a href = "http://www.liamosler.ca" class="display-4">personal website</a>
+                    <p>Developed with Node, Angular and Bootstrap.<a href = "#"> Source on Github.</a></p>
+                    <p>Showcases content relevant to my interests in web development, web mapping, GIS, graphic design and photography. Here are some examples of other projects I have worked on that have some relevance to this class:</p>
+                    <ul>
+                        <li>
+                            <a href = "https://liamosler.ca/demos/rss-aggregator/">Nova Scotia News Aggregator</a>
+                            <p>RSS feed retriever that aggregates major sources of news in Nova Scotia</p>
+                        </li>
+                    </ul>
+                </div>
 
-
-
-
+                <div class="col-sm">
+                    <a class="display-4" href= "https://github.com/LiamOsler">github profile</a>
+                </div>
+            </div>
+        </div>
+    
+```
 
 
 ## Sources Used
