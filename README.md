@@ -152,8 +152,61 @@ Next, we will implement a container and row to contain our content:
 </div>
 ```
 
+main.css:
+```css
+/* CSS for CSCI3172 Lab 1 */
+/* Global overrides: */
+body{
+
+}
+
+/* using a font-size transition is a visually pleasing way to draw attention to a link: */
+a{
+    transition: font-size 1s;
+    font-size: 1em;
+}
+
+a:hover{
+    font-size: larger;
+}
+
+/* My name, the page header, in a business card style: */
+.my-name{
+    font-size: 8em;
+}
+
+/* Page Typography: */
+.display-1{
+    font-size: 10em;
+    transition: font-size 0.5s;
+}
+
+.display-1:hover{
+    font-size: 12em;
+}
+
+.display-2{
+    font-size: 5em;
+    transition: font-size 0.5s;
+}
+
+.display-3{
+    font-size: 4em;
+}
+
+.display-4{
+    font-size: 3em;
+    transition: font-size 0.5s;
+}
+
+.display-4:hover{
+    font-size: 3.5em;
+}
+
+```
+
 
 ## Sources Used
-[Bootstrap Docs]()
+[Bootstrap - Introduction](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
 
-### File Name
+[W3Schools - CSS Transitions](https://www.w3schools.com/css/css3_transitions.asp)
