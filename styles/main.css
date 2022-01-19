@@ -10,6 +10,10 @@ a:hover{
     font-size: larger;
 }
 
+body{
+    overflow-y: hidden;
+}
+
 /* My name, the page header, in a business card style: */
 .my-name{
     font-size: 8em;
@@ -41,4 +45,22 @@ a:hover{
 
 .display-4:hover{
     font-size: 3.5em;
+}
+
+/* Canvas page underlay: */
+
+.canvas-layer{
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+
+    position: absolute;
+}
+
+.content-layer{
+    max-height: 100vh;
+    overflow-y: scroll;
+}
+
+.container-fluid{
 }
