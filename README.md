@@ -98,33 +98,58 @@ Next, we will implement a container and row to contain our content:
 
 ```html
 
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xl">
-                    <h1 class="display-1">Liam Osler</h1>
-                    <p class="display-3">CSCI3172 Lab 1: a bit about me</p>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <div class="col-sm">
-                    <a href = "http://www.liamosler.ca" class="display-4">personal website</a>
-                    <p>Developed with Node, Angular and Bootstrap.<a href = "#"> Source on Github.</a></p>
-                    <p>Showcases content relevant to my interests in web development, web mapping, GIS, graphic design and photography. Here are some examples of other projects I have worked on that have some relevance to this class:</p>
-                    <ul>
-                        <li>
-                            <a href = "https://liamosler.ca/demos/rss-aggregator/">Nova Scotia News Aggregator</a>
-                            <p>RSS feed retriever that aggregates major sources of news in Nova Scotia</p>
-                        </li>
-                    </ul>
-                </div>
+<div class="container-fluid">
+    <!-- a row with the header of the project -->
+    <div class="row">
+        <div class="col-xl">
+            <h1 class="display-1 my-name">Liam Osler</h1>
+        </div>
+    </div>
+    <hr>
+    <!-- a row with a link to my homepage and social media accounts: -->
+    <div class="row">
+        <div class="col-12">
+            <p class="display-3">find me online:</a>
+        </div>
+        <div class="col-sm">
+            <a href = "http://www.liamosler.ca" class="display-4">personal website</a>
+        </div>
+        <div class="col-sm">
+            <a class="display-4" href= "https://github.com/LiamOsler">github profile</a>
+        </div>
+        <div class="col-sm">
+            <a class="display-4" href= "https://github.com/LiamOsler">youtube channel</a>
+        </div>
+    </div>  
+    <hr>
 
-                <div class="col-sm">
-                    <a class="display-4" href= "https://github.com/LiamOsler">github profile</a>
-                </div>
-            </div>
+    <!-- a row with links to past projects and other work I wish to highlight  -->
+    <div class="row">
+        <div class="col-12">
+            <p class="display-3">sample projects:</a>
+        </div>
+
+        <div class="col-sm">
+            <a href = "http://liamosler.ca/demos/rss-aggregator/" class="display-4">news aggregator</a>
+            <p> </p>
+            <p>scrapes local news rss feeds for nova scotia, developed with php and js - <a href = "https://github.com/LiamOsler/rss-aggregator"> source on github</a></p>
         </div>
     
+    <!-- for brevity, I have excluded the links to my other projects -->
+    
+    </div>
+    <hr>
+    <!-- a row with a link to my homepage and social media accounts: -->
+    <div class="row">
+        <div class="col-12">
+            <p class="display-3">contact me:</a>
+        </div>
+        <div class="col-sm">
+            <a href = "mailto:liam.osler@dal.ca" class="display-4">liam.osler@dal.ca</a>
+        </div>
+    </div>  
+    <hr>
+</div>
 ```
 
 
