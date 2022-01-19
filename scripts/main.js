@@ -101,7 +101,7 @@ function drawCircle(circleObject){
    ctx.strokeStyle = circleObject.color;
 
    if(circleObject.collisionState == true){
-    circleObject.radius =50;
+    circleObject.radius +=1;
    }
    if(circleObject.collisionState == false){
     circleObject.radius =10;
