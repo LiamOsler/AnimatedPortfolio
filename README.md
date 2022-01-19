@@ -1,4 +1,4 @@
-# CSCI 3172 Lab 1
+# Animated Portfolio
 
 Introductory Lab - Personal Profile
 
