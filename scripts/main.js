@@ -181,13 +181,13 @@ function frameCounter(){
 
 //init function, create the initial values for the canvas window 
 function init(){
-   ctx.canvas.width = window.innerWidth;
+   ctx.canvas.width = 4096;
    ctx.canvas.height = window.innerHeight;
    minX = 0;
-   maxX = window.innerWidth;
+   maxX = 4096;
    minY = 0;
    maxY = window.innerHeight;
-   midX = maxX/2;
+   midX = window.innerWidth/2;
    midY = maxY/2;
    //Set frame count to 0?
 

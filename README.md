@@ -202,6 +202,8 @@ a:hover{
 
 I created a subtle background animation using HTMl canvas. To overlay the content of the page with it, the canvas and content layers are overlayed using ```position: absolute``` and the canvas kept from scrolling by wrapping it in a div with class ```canvas-layer``` with ```z-index: 0``` and then using ```overflow-y: scroll ``` on the content-layer so it scrolls vertically. Here is the content of the javascript:
 
+Basically, we generate an array of circles with randomized directions and velo
+
 ```javascript
 //Coordinate Inverse function (returns distance):
 function coordinateInverse(x1, y1, x2, y2){ 
@@ -212,8 +214,6 @@ function coordinateInverse(x1, y1, x2, y2){
 function randomColor(){
    return "F5F5F5";
 }
-
-console.log(randomColor());
 
 //Function that returns a random bit of either 1 or -1:
 function bitFlipper(){
@@ -227,29 +227,22 @@ function randomizeCircleArray(){
    for(let i = 0; i < 100; i++){
        //Randomize the position and radius of the circles:
        var curRadius = 10 + Math.floor(Math.random() * radiusVariance);
-
        var curPosX = midX + (Math.floor(Math.random()*100))*bitFlipper();
        var curPosY = midY + (Math.floor(Math.random()*100))*bitFlipper();
-       
        var curVelX = ((Math.random() * velocityVariance))*bitFlipper();
        var curVelY = ((Math.random() * velocityVariance))*bitFlipper();
-
        var curColor = "#" + randomColor();
-
        //Create a circle object based on the random values:
        var currentCircle = circleFactory(curPosX, curPosY, curVelX , curVelY, curRadius, curColor);
-      
        //Add the 
        circles.push(currentCircle);        
    }
 }
-
 function clearCircleArray(){
     for(let i = 0; i < 100; i++){
         circles.pop(i);
     }
 }
-
 //Method for constructing circle objects:
 //posX: center x position, posY:  center y position, velX: the x velocity component, velY: the y velocity component, radius: the radius of the circle 
 function circleFactory(posX, posY, velX, velY, radius, color){
@@ -265,8 +258,6 @@ function circleFactory(posX, posY, velX, velY, radius, color){
    }
    return currentCircle;
 }
-
-
 //function for drawing circleObjects on the canvas:
 function drawCircle(circleObject){
    ctx.fillStyle = circleObject.color;
@@ -305,6 +296,7 @@ function animateCircleArray(){
    }
 }
 
+//Check if circles collided with the mouse:
 function circleCollisionDetection(){
    for(let i = 0; i < circles.length; i++){
         var distance = coordinateInverse(mouseX, mouseY, circles[i].posX, circles[i].posY);
@@ -340,12 +332,12 @@ function frameCounter(){
    frameCount++;
 }
 
-//init function, create the initial values for the canvas window 
+//init function, create the initial values for the canvas window, handles resizes
 function init(){
-   ctx.canvas.width = window.innerWidth;
+   ctx.canvas.width = 4000;
    ctx.canvas.height = window.innerHeight;
    minX = 0;
-   maxX = window.innerWidth;
+   maxX = 4000;
    minY = 0;
    maxY = window.innerHeight;
    midX = maxX/2;
@@ -383,7 +375,7 @@ function draw(){
 function run() {
    frameCounter();
    // Clear the canvas:
-   ctx.clearRect(0, 0, c.width, c.height);
+   ctx.clearRect(0, 0, ctx.canvas.width, c.height);
    animate();
    draw();
    setTimeout(run, 1000 / 60); // 60 fps   
