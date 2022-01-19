@@ -47,6 +47,13 @@ body{
     font-size: 3.5em;
 }
 
+.link-wrapper{
+}
+
+.link-wrapper:hover .display-4{
+    font-size: 3.5em;
+}
+
 /* Canvas page underlay: */
 
 .canvas-layer{
@@ -55,6 +62,7 @@ body{
     overflow: hidden;
 
     position: absolute;
+    z-index: 0;
 }
 
 .content-layer{
