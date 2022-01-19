@@ -25,7 +25,7 @@ is imported via CDN for this project.
 
 ## Project file structure:
 
-I am going to segment the project in to files called main.js, 
+I am going to segment the project in to files called main.js and main.css
 
 ```java
 .
@@ -49,7 +49,7 @@ First, a simple HTML5 page snippet from Visual Studio Code:
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Liam Osler</title>
     </head>
 
     <body>
@@ -156,10 +156,6 @@ main.css:
 ```css
 /* CSS for CSCI3172 Lab 1 */
 /* Global overrides: */
-body{
-
-}
-
 /* using a font-size transition is a visually pleasing way to draw attention to a link: */
 a{
     transition: font-size 1s;

@@ -1,9 +1,5 @@
 /* CSS for CSCI3172 Lab 1 */
 /* Global overrides: */
-body{
-
-}
-
 /* using a font-size transition is a visually pleasing way to draw attention to a link: */
 a{
     transition: font-size 1s;
